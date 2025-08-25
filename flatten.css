@@ -1,0 +1,8 @@
+/* nuking them fucking coners  */
+
+*,*::before, *::after{
+    border-radius: 0 !important;
+}
+button, input, select, textarea, a, img, video, canvas, iframe {
+  border-radius: 0 !important;
+}

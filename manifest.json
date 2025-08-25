@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "RoundedBeGone",
+  "version": "1.0",
+  "description": "Removes rounded corners ",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["flatten.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
