@@ -2,11 +2,29 @@
   "manifest_version": 3,
   "name": "RoundedBeGone",
   "version": "1.0",
-  "description": "Removes rounded corners ",
+  "description": "Removes rounded corners",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Toggle RoundedBeGone"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["flatten.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["flatten.css"],
+      "js": ["content.js"],
       "run_at": "document_start"
     }
   ]
